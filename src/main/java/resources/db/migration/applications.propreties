@@ -1,0 +1,8 @@
+spring.datasource.url=jdbc:postgresql://localhost:5432/tsinjo
+spring.datasource.username=postgres
+spring.datasource.password=PASS_DB
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.show-sql=true
+spring.flyway.enabled=true
+
+vola.apiKey=VOLA_API_KEY

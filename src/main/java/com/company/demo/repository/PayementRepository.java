@@ -1,0 +1,7 @@
+package com.company.demo.repository;
+
+import com.company.demo.models.Payment;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PayementRepository extends JpaRepository<Payment, String> {
+}

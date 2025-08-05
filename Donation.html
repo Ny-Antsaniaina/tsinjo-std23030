@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tsinjo - Dons</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<h1>Faire un don</h1>
+<form action="/donation" method="post">
+    <label>Email :</label>
+    <input type="email" name="email" required>
+    <br>
+    <label>ID Paiement :</label>
+    <input type="text" name="pspPaymentId" required>
+    <br>
+    <button type="submit">Donner !</button>
+</form>
+
+<hr>
+
+<h2>Historique des dons</h2>
+<ul>
+    <li th:each="donation : ${donations}">
+        Don de <span th:text="${donation.donor.email}"></span>
+        le <span th:text="${#dates.format(donation.donationDate, 'dd/MM/yyyy HH:mm')}"></span>
+    </li>
+</ul>
+</body>
+</html>
