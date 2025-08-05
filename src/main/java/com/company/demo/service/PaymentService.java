@@ -1,5 +1,6 @@
 package com.company.demo.service;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
@@ -18,7 +19,7 @@ public class PaymentService {
         this.webClient = webClient;
     }
 
-    public Mono<Map<String, Object>> getPayment(String email, String pspPaymentId) {
+    public Mono<Map> getPayment(String email, String pspPaymentId) {
         return webClient.get()
                 .uri(uriBuilder -> uriBuilder
                         .path("/payment")
