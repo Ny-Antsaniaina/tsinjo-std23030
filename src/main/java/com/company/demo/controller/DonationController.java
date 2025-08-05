@@ -5,6 +5,7 @@ import com.company.demo.models.Donor;
 import com.company.demo.models.Payment;
 import com.company.demo.repository.DonationRepository;
 import com.company.demo.repository.DonorRepository;
+import com.company.demo.repository.PaymentRepository;
 import com.company.demo.service.PaymentService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,12 +20,12 @@ public class DonationController {
     private final PaymentService paymentService;
     private final DonationRepository donationRepository;
     private final DonorRepository donorRepository;
-    private final PayementRepository paymentRepository;
+    private final PaymentRepository paymentRepository;
 
     public DonationController(PaymentService paymentService,
                               DonationRepository donationRepository,
                               DonorRepository donorRepository,
-                              PayementRepository paymentRepository) {
+                              PaymentRepository paymentRepository) {
         this.paymentService = paymentService;
         this.donationRepository = donationRepository;
         this.donorRepository = donorRepository;

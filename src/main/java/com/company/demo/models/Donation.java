@@ -1,10 +1,14 @@
 package com.company.demo.models;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
 @Entity
+@Getter
+@Setter
 public class Donation {
     @Id
     @GeneratedValue
@@ -13,10 +17,10 @@ public class Donation {
     @ManyToOne
     private Donor donor;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "payment_id", referencedColumnName = "pspPaymentId")
     private Payment payment;
 
     private LocalDateTime donationDate;
-
 
 }
