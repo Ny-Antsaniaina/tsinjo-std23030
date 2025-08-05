@@ -5,7 +5,6 @@ import com.company.demo.models.Donor;
 import com.company.demo.models.Payment;
 import com.company.demo.repository.DonationRepository;
 import com.company.demo.repository.DonorRepository;
-import com.company.demo.repository.PayementRepository;
 import com.company.demo.service.PaymentService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
